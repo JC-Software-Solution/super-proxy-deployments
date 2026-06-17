@@ -13,6 +13,7 @@ spec:
       labels:
         app: super-proxy
     spec:
+      serviceAccountName: super-proxy-operator
       containers:
         - name: super-proxy
           imagePullPolicy: Always
@@ -23,4 +24,15 @@ spec:
             - name: http
               containerPort: 8080
               protocol: TCP
-          
+          readinessProbe:
+            httpGet:
+              path: /q/health/ready
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /q/health/live
+              port: 8080
+            initialDelaySeconds: 15
+            periodSeconds: 20

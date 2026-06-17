@@ -6,10 +6,22 @@ spec:
   replicas: 2
   template:
     spec:
+      serviceAccountName: super-proxy-operator
       containers:
         - name: super-proxy
           image: super-proxy-app-image
-          imagePullPolicy: Always
+          readinessProbe:
+            httpGet:
+              path: /q/health/ready
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /q/health/live
+              port: 8080
+            initialDelaySeconds: 15
+            periodSeconds: 20
           resources:
             requests:
               cpu: "100m"
@@ -20,4 +32,3 @@ spec:
           envFrom:
             - configMapRef:
                 name: super-proxy-cm
-          
