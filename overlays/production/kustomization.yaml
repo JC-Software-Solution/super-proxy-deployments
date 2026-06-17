@@ -14,4 +14,4 @@ patches:
 images:
 - name: super-proxy-app-image
   newName: jovanie1795/super-proxy
-  newTag: 1781663012.2.1
+  newTag: 1781669499.4.1
