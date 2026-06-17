@@ -9,7 +9,6 @@ spec:
       containers:
         - name: super-proxy
           image: super-proxy-app-image
-          imagePullPolicy: Always
           resources:
             requests:
               cpu: "100m"
