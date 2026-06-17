@@ -16,6 +16,9 @@ spec:
       containers:
         - name: super-proxy
           imagePullPolicy: Always
+          envFrom:
+            - configMapRef:
+                name: super-proxy-cm
           ports:
             - name: http
               containerPort: 8080
