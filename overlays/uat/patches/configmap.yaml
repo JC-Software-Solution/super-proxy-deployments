@@ -4,5 +4,5 @@ metadata:
   name: super-proxy-cm
 data:
   MANAGEMENT_METRICS_TAGS_APPLICATION: zoloz-bl-data-migration-UAT
-  OPERATOR_KONG_ADMIN_URL: "http://kong-admin.kong:8001"
+  OPERATOR_KONG_ADMIN_URL: "http://kong-admin.kong:8002"
   OPERATOR_KONG_SERVICE_NAME: "superproxy-backend"
