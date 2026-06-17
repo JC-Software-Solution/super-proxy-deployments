@@ -3,7 +3,6 @@ kind: ConfigMap
 metadata:
   name: super-proxy-cm
 data:
-  MANAGEMENT_METRICS_TAGS_APPLICATION: super-proxy-UAT
   MANAGEMENT_ENDPOINT_METRICS_ENABLED: "true"
   MANAGEMENT_ENDPOINT_PROMETHEUS_ENABLED: "true"
   MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE: health,prometheus,info
