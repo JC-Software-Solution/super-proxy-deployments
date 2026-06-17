@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../../base
+patches:
+- path: patches/deployment.yaml
+  target:
+    kind: Deployment
+    name: super-proxy
+- path: patches/configmap.yaml
+  target:
+    kind: ConfigMap
+    name: super-proxy-cm
+images:
+- name: super-proxy-app-image
+  newName: jovanie1795/super-proxy
+  newTag: 1781659881.1.3

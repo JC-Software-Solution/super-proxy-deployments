@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: super-proxy
+spec:
+  replicas: 2
+  template:
+    spec:
+      containers:
+        - name: super-proxy
+          image: super-proxy-app-image
+          imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "256Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+          envFrom:
+            - configMapRef:
+                name: super-proxy-cm
+          
