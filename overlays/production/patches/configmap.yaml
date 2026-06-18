@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: super-proxy-cm
 data:
-  MANAGEMENT_METRICS_TAGS_APPLICATION: zoloz-bl-data-migration-UAT
+  MANAGEMENT_METRICS_TAGS_APPLICATION: super-proxy
