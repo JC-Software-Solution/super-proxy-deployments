@@ -19,4 +19,4 @@ data:
   MANAGEMENT_INFO_GIT_ENABLED: "true"
   MANAGEMENT_INFO_GIT_MODE: full
   OPERATOR_KONG_ADMIN_URL: "http://kong-kong-admin.kong:8001"
-  OPERATOR_KONG_SERVICE_NAME: "superproxy-backend"
+  OPERATOR_KONG_SERVICE_NAME: "super-proxy"
