@@ -4,5 +4,5 @@ metadata:
   name: super-proxy-cm
 data:
   MANAGEMENT_METRICS_TAGS_APPLICATION: super-proxy
-  OPERATOR_KONG_ADMIN_URL: "http://kong-kong-manager.kong:8002"
+  OPERATOR_KONG_ADMIN_URL: "http://kong-kong-admin.kong:8001"   # adjust port to match what's actually shown
   OPERATOR_KONG_SERVICE_NAME: "superproxy-backend"
